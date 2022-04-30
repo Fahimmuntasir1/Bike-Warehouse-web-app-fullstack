@@ -1,0 +1,10 @@
+.banner {
+  background-image: url("https://www.kandani.es/img/Tienda/tienda_kandani_0002.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.banner-content {
+  padding: 20px;
+}
