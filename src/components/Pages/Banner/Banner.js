@@ -3,10 +3,12 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div className="banner container h-screen">
-      <div className="banner-content bg-slate-300 text-center">
-        <h2>ZERO BIKER Ride and Explore</h2>
+    <div className="my-banner">
+      <div className="banner-content">
+        <h1>ZERO BIKER BANGLADESH</h1>
+        <h2>Ride and Explore World!</h2>
         <p>15% Discount For This Eid</p>
+        <button>Check Now!</button>
       </div>
     </div>
   );
