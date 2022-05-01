@@ -1,0 +1,32 @@
+.div-style {
+  border-bottom: 2px solid rgb(168, 168, 168);
+  width: 40%;
+  display: flex;
+  margin: auto;
+}
+.social-btn {
+  width: 80%;
+  margin-bottom: 10px;
+  border: none;
+  border: 2px solid transparent;
+  padding: 5px 0;
+  border-radius: 5px;
+  color: #000000;
+  background: #f2f2f2eb;
+}
+.social-btn:hover {
+  background: transparent;
+  border: 2px solid rgba(184, 184, 184, 0.43);
+  /* background: linear-gradient(145deg, #f3f3f3, #e0e0e0); */
+}
+.social-btn:active {
+  background: #f2f2f2eb;
+  box-shadow: none;
+}
+.social-buttons {
+  margin: 10px 0;
+}
+.social-buttons img {
+  width: 30px;
+  display: inline;
+}

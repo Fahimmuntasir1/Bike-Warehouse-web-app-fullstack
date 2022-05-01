@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import WithGoogle from "../Social-Login/WithGoogle";
 
 const Register = () => {
   return (
     <div className="login-form">
       <h1>Register</h1>
       <form>
-        <input type="text" name="name" id="" placeholder="Enter Name" />
+        <input
+          type="text"
+          name="name"
+          id=""
+          placeholder="Enter Name"
+          required
+        />
         <input type="email" name="email" placeholder="Email Address" required />
         <input
           type="password"
@@ -30,6 +37,7 @@ const Register = () => {
           </Link>
         </p>
       </form>
+      <WithGoogle />
     </div>
   );
 };

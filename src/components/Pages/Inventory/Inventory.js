@@ -6,7 +6,7 @@ const Inventory = ({ inventory }) => {
   return (
     <div className="inventory">
       <img src={img} alt="" />
-      <div className="card-content">
+      <div className="inventory-content">
       <h3>{name}</h3>
       <span>Price: {price}</span>
       <p>{description}</p>
