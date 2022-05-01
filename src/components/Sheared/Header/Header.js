@@ -29,6 +29,11 @@ const Header = () => {
               <Nav.Link as={Link} to="/about" className="text-white">
                 About
               </Nav.Link>
+
+              <Nav.Link as={Link} to="login" className="text-white">
+                  Login/Register
+                </Nav.Link>
+
               {/* {user ? (
                 <button
                   className="btn btn-link text-white  text-decoration-none"
