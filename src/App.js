@@ -7,6 +7,10 @@ import Footer from "./components/Sheared/Footer/Footer";
 import About from "./components/Pages/About/About";
 import Register from "./components/Login-Register/Register/Register";
 import Login from "./components/Login-Register/Login/Login";
+import NotFound from './components/Pages/NotFound/NotFound'
+import Blog from "./components/Pages/Blogs/Blog";
+import UpdateInvntory from "./components/Pages/InventoryUpdate/UpdateInvntory";
+import RequireAuth from "./components/Auth/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -18,6 +22,13 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
+        <Route path="/blogs" element={<Blog/>}></Route>
+        <Route path="/invupdate" element={
+          <RequireAuth>
+            <UpdateInvntory/>
+          </RequireAuth>
+        }></Route>
+        <Route path="/*" element={<NotFound/>}></Route>
       </Routes>
       <Footer />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./inventory.css";
 
 const Inventory = ({ inventory }) => {
@@ -10,7 +11,8 @@ const Inventory = ({ inventory }) => {
       <h3>{name}</h3>
       <span>Price: {price}</span>
       <p>{description}</p>
-      <button>Update</button>
+      <Link to='/invupdate'><button>Update</button></Link>
+      
       </div>
     </div>
   );
