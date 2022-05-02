@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../Firebase/firebase.init";
 import WithGoogle from "../Social-Login/WithGoogle";
 import "./Login.css";
@@ -18,6 +18,9 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, user, loading, firebaseError] =
     useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
 
   const handleEmailChange = (e) => {
     const validEmail = /\S+@\S+\.\S+/.test(e.target.value);
@@ -52,6 +55,12 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true });
+    }
+  }, [user]);
 
   return (
     <div className="login-form">

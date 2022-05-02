@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../../Firebase/firebase.init";
 import "./WithGoogle.css";
 
 const WithGoogle = () => {
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+
+  const navigate = useNavigate();
+
+  let loginCancelError;
+  if (googleError) {
+    loginCancelError = (
+      <div>
+        <p className="text-danger">Error: {googleError?.message}</p>
+      </div>
+    );
+  }
+
+  useEffect(() => {
+    if (googleUser) {
+      navigate("/");
+    }
+  }, [googleUser]);
+
   return (
     <div>
       <div className="d-flex ">
@@ -11,9 +34,7 @@ const WithGoogle = () => {
       </div>
       <div className="social-buttons">
         <div>
-          <button
-            /* onClick={() => signInWithGoogle()} */ className="social-btn"
-          >
+          <button onClick={() => signInWithGoogle()} className="social-btn">
             {" "}
             <img
               alt="svgImg"
@@ -33,7 +54,7 @@ const WithGoogle = () => {
           </button>
         </div>
       </div>
-      {/* {loginCancelError} */}
+      {loginCancelError}
     </div>
   );
 };
