@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./inventory.css";
 
 const Inventory = ({ inventory }) => {
-  const { name, price, description, img,quantity, supplier  } = inventory;
+  const { id, name, price, description, img, quantity, supplier  } = inventory;
   return (
     <div className="inventory">
       <img src={img} alt="" />
@@ -11,7 +11,7 @@ const Inventory = ({ inventory }) => {
       <h3>{name}</h3>
       <span>Price: {price}</span>
       <p>{description}</p>
-      <Link to='/invupdate'><button>Update</button></Link>
+      <Link to={`/invupdate/${id}`}><button>Update</button></Link>
       
       </div>
     </div>

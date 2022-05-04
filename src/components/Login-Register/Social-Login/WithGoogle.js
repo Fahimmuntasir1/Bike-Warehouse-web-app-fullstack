@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
-import { auth } from "../../Firebase/firebase.init";
+import auth from "../../Firebase/firebase.init";
 import "./WithGoogle.css";
 
 const WithGoogle = () => {

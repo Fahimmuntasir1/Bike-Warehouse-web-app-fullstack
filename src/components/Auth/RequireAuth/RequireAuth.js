@@ -6,7 +6,7 @@ import auth from "../../Firebase/firebase.init";
 const RequireAuth = ({ children }) => {
   const [user, loading, error] = useAuthState(auth);
   const location = useLocation();
- /*  if (loading) {
+  if (loading) {
     return (
       <div className="text-center">
         <div className="spinner-border" role="status">
@@ -14,7 +14,7 @@ const RequireAuth = ({ children }) => {
         </div>
       </div>
     );
-  } */
+  }
   if (user) {
     return children;
   } else {
