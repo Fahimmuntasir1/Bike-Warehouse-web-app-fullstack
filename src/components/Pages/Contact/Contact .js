@@ -3,8 +3,8 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="bg-light">
-      <h2 className="text-center py-5">Contact Us</h2>
+    <div className="bg-light py-5">
+      <h2 className="text-center py-2">Contact Us</h2>
 
       <div className="flex justify-content-around align-items-center">
         <div>
