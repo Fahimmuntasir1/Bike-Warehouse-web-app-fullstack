@@ -11,6 +11,8 @@ import NotFound from './components/Pages/NotFound/NotFound'
 import Blog from "./components/Pages/Blogs/Blog";
 import UpdateInvntory from "./components/Pages/InventoryUpdate/UpdateInvntory";
 import RequireAuth from "./components/Auth/RequireAuth/RequireAuth";
+
+import ManageAllInventory from "./components/Pages/ManageAllInventory/ManageAllInventory";
 import ManageInventories from "./components/Pages/ManageInventories/ManageInventories";
 
 function App() {
