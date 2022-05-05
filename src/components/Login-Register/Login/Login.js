@@ -89,9 +89,9 @@ const Login = () => {
           <p className="error-text">{firebaseError?.message}</p>
         )}
         <p className="text-center">
-          Already user?{" "}
+          New in Zero Biker ?{" "}
           <Link to="/register" role="button" className="text-danger">
-            Register
+            Register Now
           </Link>
         </p>
       </form>

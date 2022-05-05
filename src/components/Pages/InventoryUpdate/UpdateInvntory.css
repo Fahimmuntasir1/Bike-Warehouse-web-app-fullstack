@@ -1,0 +1,28 @@
+.card {
+  width: 30%;
+  margin: 10px auto;
+}
+.update-btn {
+  border: 2px solid #71a3ff;
+  color: #ffffff;
+  padding: 7px 10px;
+  font-size: 17px;
+  transition: 0.6s;
+  background-color: #5889e4de;
+}
+.update-btn:hover {
+  color: #6299ff;
+  background: transparent;
+}
+.card-description {
+  padding: 10px 0 0 10px;
+}
+.number-input {
+  padding: 4px;
+  border: 1px solid #035bff33;
+}
+.number-input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #4a89ff;
+}

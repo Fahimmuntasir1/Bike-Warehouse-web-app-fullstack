@@ -1,5 +1,6 @@
 .inventory {
   border-radius: 5px;
+  background-color: #fff;
   overflow: hidden;
   box-shadow: 3px 6px 42px -6px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 3px 6px 42px -6px rgba(0, 0, 0, 0.7);
@@ -23,7 +24,7 @@
   margin: 20px 0;
 }
 .inventory button:hover {
-  color: black;
+  color: #71a3ff;
   background: transparent;
   /* color: black; */
 }

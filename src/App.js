@@ -23,7 +23,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/blogs" element={<Blog/>}></Route>
-        <Route path="/invupdate/:id" element={
+        <Route path="/invupdate/:_id" element={
           <RequireAuth>
             <UpdateInvntory/>
           </RequireAuth>

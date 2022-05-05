@@ -6,16 +6,16 @@ const InventoryItems = () => {
   const [inventories, setInventories] = useState([]);
 
   useEffect(() => {
-    fetch("inventory.json")
+    fetch("http://localhost:5000/inventory")
       .then((res) => res.json())
       .then((data) => setInventories(data));
   }, []);
   return (
-    <div>
+    <div className="background">
       <h2 className="inv-title"> INVENTORIES</h2>
       <div className="inventories">
-        {inventories.map((inventory) => (
-          <Inventory key={inventory.id} inventory={inventory}></Inventory>
+        {inventories.slice(0,6).map((inventory) => (
+          <Inventory key={inventory._id} inventory={inventory}></Inventory>
         ))}
       </div>
     </div>

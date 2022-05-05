@@ -9,7 +9,7 @@ const RequireAuth = ({ children }) => {
   if (loading) {
     return (
       <div className="text-center">
-        <div className="spinner-border" role="status">
+        <div className="spinner-border text-primary" role="status">
           <span className="sr-only">Loading...</span>
         </div>
       </div>
