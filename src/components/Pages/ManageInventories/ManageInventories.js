@@ -16,7 +16,7 @@ const ManageInventories = () => {
       ))}
 
       <div className="text-center">
-        <Link to="/">
+        <Link to="/addnewitems">
           <button className="manage-btn">Add new items</button>
         </Link>
       </div>

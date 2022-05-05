@@ -1,0 +1,35 @@
+.add-new {
+  width: 40%;
+  margin: 0 auto;
+}
+.add-new form {
+  display: flex;
+  flex-direction: column;
+}
+.add-new input {
+  margin-bottom: 8px;
+  padding: 3px;
+  border-bottom: 1px solid rgba(139, 139, 139, 0.272);
+}
+.add-new input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #2aa4cc;
+}
+.submit-btn {
+  width: 120px;
+  text-align: center;
+  border: 1px solid #71a3ff;
+  color: #ffffff;
+  padding: 8px 10px;
+  font-size: 17px;
+  transition: 0.6s;
+  background-color: #5889e4de;
+  margin: 30px 0;
+}
+.submit-btn:hover {
+  border: none;
+  border: 1px solid #71a3ff;
+  color: #71a3ff;
+  background: transparent;
+}
