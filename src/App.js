@@ -11,6 +11,7 @@ import NotFound from './components/Pages/NotFound/NotFound'
 import Blog from "./components/Pages/Blogs/Blog";
 import UpdateInvntory from "./components/Pages/InventoryUpdate/UpdateInvntory";
 import RequireAuth from "./components/Auth/RequireAuth/RequireAuth";
+import ManageInventories from "./components/Pages/ManageInventories/ManageInventories";
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
         <Route path="/invupdate/:_id" element={
           <RequireAuth>
             <UpdateInvntory/>
+          </RequireAuth>
+        }></Route>
+        <Route path="/manageinventories" element={
+          <RequireAuth>
+            <ManageInventories/>
           </RequireAuth>
         }></Route>
         <Route path="/*" element={<NotFound/>}></Route>

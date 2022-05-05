@@ -6,6 +6,26 @@
   padding: 20px 0;
   background-color: rgba(232, 232, 232, 0.093);
 }
+.manage-div {
+  margin-top: 20px;
+  text-align: center;
+}
+.manage-btn {
+  width: 200px;
+  text-align: center;
+  border: 2px solid #71a3ff;
+  color: #ffffff;
+  padding: 7px 10px;
+  font-size: 17px;
+  transition: 0.6s;
+  background-color: #5889e4de;
+  margin: 30px 0;
+}
+.manage-btn:hover {
+  transform: scale(1.1);
+  color: #71a3ff;
+  background: transparent;
+}
 .inventories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
