@@ -23,11 +23,8 @@ const MyItems = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
-            const remaining = userItems.filter(
-              (userItem) => userItem._id !== id
-            );
-            setUserItems(remaining);
+          const remaining = userItems.filter((userItem) => userItem._id !== id);
+          setUserItems(remaining);
         });
     }
   };

@@ -30,3 +30,9 @@
   background: transparent;
   color: #5889e4;
 }
+
+@media screen and (max-width: 667px) {
+  .contact-responsive {
+    flex-direction: column;
+  }
+}
