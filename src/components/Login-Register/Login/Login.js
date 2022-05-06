@@ -82,7 +82,7 @@ const Login = () => {
           required
         />
         {errors?.password && <p className="error-text">{errors.password}</p>}
-        <div className=" submit-btn ">
+        <div className=" submit-button ">
           <input type="submit" value="Log In" />
         </div>
         {firebaseError && (

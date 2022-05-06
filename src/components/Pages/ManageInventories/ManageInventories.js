@@ -8,6 +8,9 @@ const ManageInventories = () => {
 
   return (
     <div>
+      <p className="text-center py-3 fs-2">
+        Remaining Products : {inventories.length}
+      </p>
       {inventories.map((inventory) => (
         <ManageAllInventory
           key={inventory._id}

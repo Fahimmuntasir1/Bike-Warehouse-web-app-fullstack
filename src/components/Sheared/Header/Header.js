@@ -3,14 +3,14 @@ import "./Header.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import auth  from "../../Firebase/firebase.init";
+import auth from "../../Firebase/firebase.init";
 import { signOut } from "firebase/auth";
 
 const Header = () => {
-  const [user] = useAuthState(auth)
- const handleSignOut=()=>{
-   signOut(auth)
- }
+  const [user] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" className="navbar-custom">
@@ -28,23 +28,34 @@ const Header = () => {
               <Nav.Link as={Link} to="/blogs">
                 Blogs
               </Nav.Link>
-              <Nav.Link as={Link} to="/gallery">
-                Gallery
+              <Nav.Link as={Link} to="/about" className="">
+                About
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/about" className="text-white">
-                About
-              </Nav.Link>
+              {user && (
+                <>
+                  <Nav.Link as={Link} to="/manageinventories" className="">
+                    Manage Items
+                  </Nav.Link>
 
-              <Nav.Link as={Link} to="login" className="text-white">
-                
-              </Nav.Link>
+                  <Nav.Link as={Link} to="/addnewitems" className="">
+                    Add Items
+                  </Nav.Link>
+
+                  <Nav.Link as={Link} to="/about" className="mx-2">
+                    My Items
+                  </Nav.Link>
+                </>
+              )}
 
               {user ? (
-                <button onClick={handleSignOut}
-                  className="btn btn-link text-white text-decoration-none"> Sign
-                  Out
+                <button
+                  onClick={handleSignOut}
+                  className=" my-button text-decoration-none"
+                >
+                  {" "}
+                  Sign Out
                 </button>
               ) : (
                 <Nav.Link as={Link} to="login" className="text-white">
