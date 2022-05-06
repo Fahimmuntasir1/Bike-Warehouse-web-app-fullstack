@@ -110,7 +110,7 @@ const Register = () => {
           placeholder="Confirm Password"
           required
         />
-        <div className=" submit-btn ">
+        <div className=" submit-button ">
           <input type="submit" value="Sign Up" />
         </div>
         {firebaseError && (

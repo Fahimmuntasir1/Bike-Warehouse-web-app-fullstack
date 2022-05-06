@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" className="navbar-custom">
+      <Navbar collapseOnSelect  expand="lg" className="navbar-custom">
         <Container>
           <Navbar.Brand as={Link} className="fs-3 fw-bold" to="/">
             ZERO BIKER
@@ -43,7 +43,7 @@ const Header = () => {
                     Add Items
                   </Nav.Link>
 
-                  <Nav.Link as={Link} to="/about" className="mx-2">
+                  <Nav.Link as={Link} to="/myitems" className="mx-2">
                     My Items
                   </Nav.Link>
                 </>
