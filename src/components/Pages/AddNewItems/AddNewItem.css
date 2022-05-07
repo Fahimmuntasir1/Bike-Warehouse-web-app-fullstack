@@ -33,3 +33,10 @@
   color: #71a3ff;
   background: transparent;
 }
+
+
+@media screen and (max-width: 667px) {
+  .add-new {
+    width: 80%;
+  }
+}

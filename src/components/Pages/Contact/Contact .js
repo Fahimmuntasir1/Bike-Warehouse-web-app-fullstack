@@ -7,12 +7,12 @@ const Contact = () => {
       <h2 className="text-center py-2">Contact Us</h2>
 
       <div className="contact-responsive flex justify-content-around align-items-center">
-        <div>
+        <div className="mail-anim">
           <lottie-player
             src="https://assets4.lottiefiles.com/packages/lf20_u25cckyh.json"
             background="transparent"
             speed="1"
-            style={{ width: "400px", height: "400px" }}
+            style={{ width: "300px", height: "400px" }}
             loop
             autoplay
           ></lottie-player>

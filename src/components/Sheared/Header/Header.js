@@ -19,8 +19,8 @@ const Header = () => {
             ZERO BIKER
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+          <Navbar.Collapse className="" id="responsive-navbar-nav">
+            <Nav className="me-auto my-nav ">
               <Nav.Link href="/#services">Services</Nav.Link>
               <Nav.Link as={Link} to="/checkout">
                 Checkout

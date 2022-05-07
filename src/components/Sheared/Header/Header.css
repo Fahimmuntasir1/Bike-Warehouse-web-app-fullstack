@@ -1,6 +1,10 @@
 .navbar-custom {
   background: linear-gradient(45deg, #5b86e5, #36d1dc);
 }
+.nav-link {
+  /* background: rgb(231, 229, 229); */
+  color: red;
+}
 .my-button {
   border: 2px solid #fff;
   background-color: #ffffff;

@@ -22,3 +22,14 @@
   background: transparent;
   color: #e72b2b;
 }
+
+
+@media screen and (max-width: 667px) {
+  .manage-table{
+    display: block;
+    text-align: center;
+  }
+  .manage-table img{
+    width: 100%;
+  }
+}
