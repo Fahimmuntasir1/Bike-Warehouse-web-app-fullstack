@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <div>
-      <Navbar collapseOnSelect  expand="lg" className="navbar-custom">
+      <Navbar collapseOnSelect expand="lg" className="navbar-custom">
         <Container>
           <Navbar.Brand as={Link} className="fs-3 fw-bold" to="/">
             ZERO BIKER
@@ -21,15 +21,15 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="" id="responsive-navbar-nav">
             <Nav className="me-auto my-nav ">
-              <Nav.Link href="/#services">Services</Nav.Link>
-              <Nav.Link as={Link} to="/checkout">
-                Checkout
-              </Nav.Link>
+              <Nav.Link href="/#inventory">Inventories</Nav.Link>
               <Nav.Link as={Link} to="/blogs">
                 Blogs
               </Nav.Link>
               <Nav.Link as={Link} to="/about" className="">
                 About
+              </Nav.Link>
+              <Nav.Link as={Link} to="/#contact">
+                Contact Us
               </Nav.Link>
             </Nav>
             <Nav>

@@ -5,7 +5,7 @@ import "./inventory.css";
 const Inventory = ({ inventory }) => {
   const { _id, name, price, description, img, quantity, supplier } = inventory;
   return (
-    <div className="inventory">
+    <div id="inventory" className="inventory">
       <img src={img} alt="" />
       <div className="inventory-content">
         <h3>{name}</h3>

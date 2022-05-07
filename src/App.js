@@ -18,6 +18,8 @@ import ManageInventories from "./components/Pages/ManageInventories/ManageInvent
 import AddNewItem from "./components/Pages/AddNewItems/AddNewItem";
 import MyItems from "./components/Pages/MyItems/MyItems";
 import { ToastContainer } from "react-bootstrap";
+import Inventory from "./components/Pages/Inventory/Inventory";
+import Contact from "./components/Pages/Contact/Contact ";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/blogs" element={<Blog />}></Route>
+        <Route path="/inventory" element={<Inventory />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
         <Route
           path="/myitems"
           element={
