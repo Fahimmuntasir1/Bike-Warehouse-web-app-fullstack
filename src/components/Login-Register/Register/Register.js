@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import auth  from "../../Firebase/firebase.init";
+import auth from "../../Firebase/firebase.init";
 import WithGoogle from "../Social-Login/WithGoogle";
 
 const Register = () => {
@@ -18,17 +18,12 @@ const Register = () => {
   });
 
   const [createUserWithEmailAndPassword, user, loading, firebaseError] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
 
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-
-  useEffect(() => {
-    if (user) {
-      navigate(from);
-    }
-  }, [user]);
 
   const handleEmailChange = (e) => {
     const validEmail = /\S+@\S+\.\S+/.test(e.target.value);
@@ -75,6 +70,12 @@ const Register = () => {
     e.preventDefault();
     createUserWithEmailAndPassword(userInfo.email, userInfo.password);
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [user]);
 
   return (
     <div className="login-form">

@@ -1,8 +1,14 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../Firebase/firebase.init";
 import WithGoogle from "../Social-Login/WithGoogle";
+import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 
 const Login = () => {
@@ -18,6 +24,8 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, user, loading, firebaseError] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state?.from?.pathname || "/";
@@ -51,14 +59,33 @@ const Login = () => {
     }
   };
 
-  const handleUserSubmit = (e) => {
+  const handleUserSubmit = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(userInfo.email, userInfo.password);
+    const email = userInfo.email;
+    const password = userInfo.password;
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post(
+      "https://quiet-oasis-81679.herokuapp.com/getToken",
+      {
+        email,
+      }
+    );
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
+  };
+
+  const resetPassword = async () => {
+    if (userInfo.email) {
+      await sendPasswordResetEmail(userInfo.email);
+      toast("Sent email");
+    } else {
+      toast("Please enter a valid email for reset password");
+    }
   };
 
   useEffect(() => {
     if (user) {
-      navigate(from, { replace: true });
+      // navigate(from, { replace: true });
     }
   }, [user]);
 
@@ -92,6 +119,17 @@ const Login = () => {
           New in Zero Biker ?{" "}
           <Link to="/register" role="button" className="text-danger">
             Register Now
+          </Link>
+        </p>
+        <p className="text-center">
+          Forget Password??{" "}
+          <Link
+            to=""
+            onClick={resetPassword}
+            role="button"
+            className="text-danger"
+          >
+            Reset Now
           </Link>
         </p>
       </form>

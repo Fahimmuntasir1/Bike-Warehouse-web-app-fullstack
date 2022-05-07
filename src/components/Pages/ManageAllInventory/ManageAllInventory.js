@@ -3,14 +3,14 @@ import useInventories from "../../../hooks/useInventories";
 import "./ManageAllInventory.css";
 
 const ManageAllInventory = ({ inventory }) => {
-    const [inventories, setInventories] = useInventories()
+  const [inventories, setInventories] = useInventories();
   const { _id, img, name, quantity, price, supplier } = inventory;
 
   const handleDeleteItem = (id) => {
     const proceed = window.confirm("Are you sure to delete this?");
 
     if (proceed) {
-      const url = `http://localhost:5000/inventory/${_id}`;
+      const url = `https://quiet-oasis-81679.herokuapp.com/inventory/${_id}`;
       fetch(url, {
         method: "DELETE",
       })

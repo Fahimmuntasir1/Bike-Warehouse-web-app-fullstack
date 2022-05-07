@@ -11,7 +11,7 @@ const AddNewItem = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
-    const url = `http://localhost:5000/useritem`;
+    const url = `https://quiet-oasis-81679.herokuapp.com/useritem`;
     fetch(url, {
       method: "POST",
       headers: { "content-type": "application/json" },

@@ -8,7 +8,12 @@ const MyItems = () => {
 
   useEffect(() => {
     const email = user.email;
-    fetch(`http://localhost:5000/userItem?email=${email}`)
+    const url = `https://quiet-oasis-81679.herokuapp.com/userItem?email=${email}`;
+    fetch(url, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setUserItems(data));
   }, [user]);
@@ -17,7 +22,7 @@ const MyItems = () => {
     const proceed = window.confirm("Are you sure to delete this?");
 
     if (proceed) {
-      const url = `http://localhost:5000/userItem/${id}`;
+      const url = `https://quiet-oasis-81679.herokuapp.com/userItem/${id}`;
       fetch(url, {
         method: "DELETE",
       })
