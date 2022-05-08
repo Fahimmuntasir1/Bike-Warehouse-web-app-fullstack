@@ -2,6 +2,15 @@
   width: 98%;
   margin: 0 auto;
 }
-/* .my-blogs img {
-  width: 500px;
-} */
+.my-blogs img {
+  width: 700px;
+}
+.question {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 667px) {
+  .question {
+    display: block;
+  }
+}
