@@ -9,6 +9,7 @@ const InventoryItems = () => {
   return (
     <div className="background">
       <h2 className="inv-title"> INVENTORIES</h2>
+      <div className="border my-4"></div>
       <div className="inventories">
         {inventories.slice(0, 6).map((inventory) => (
           <Inventory key={inventory._id} inventory={inventory}></Inventory>

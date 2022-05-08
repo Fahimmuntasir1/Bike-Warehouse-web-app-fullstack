@@ -5,6 +5,9 @@ const Contact = () => {
   return (
     <div id="contact" className="bg-light py-5">
       <h2 className="text-center py-2">Contact Us</h2>
+      <div className="border">
+        
+      </div>
 
       <div className="contact-responsive flex justify-content-around align-items-center">
         <div className="mail-anim">
