@@ -8,10 +8,10 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyCjWA9eIyWVjrr4ILqzJRF38n2BqaGEx5Q",
   authDomain: "bike-warehouse-b8017.firebaseapp.com",
-  project_id: "bike-warehouse-b8017",
+  projectId: "bike-warehouse-b8017",
   storageBucket: "bike-warehouse-b8017.appspot.com",
-  messagingSender_id: "973633587896",
-  app_id: "1:973633587896:web:2a3ddee9ba8070e187024d",
+  messagingSenderId: "973633587896",
+  appId: "1:973633587896:web:2a3ddee9ba8070e187024d"
 };
 
 // Initialize Firebase

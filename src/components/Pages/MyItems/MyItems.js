@@ -5,6 +5,7 @@ import auth from "../../Firebase/firebase.init";
 const MyItems = () => {
   const [user] = useAuthState(auth);
   const [userItems, setUserItems] = useState([]);
+  console.log(userItems);
 
   useEffect(() => {
     const email = user.email;
@@ -37,7 +38,7 @@ const MyItems = () => {
   return (
     <div>
       <h2>My Items {userItems.length}</h2>
-      {userItems.map((userItem) => (
+      {userItems?.map((userItem) => (
         <div key={userItem._id}>
           <div className="flex manage-table">
             <img src={userItem.img} alt="" />
