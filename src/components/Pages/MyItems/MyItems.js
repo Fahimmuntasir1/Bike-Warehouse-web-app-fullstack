@@ -9,7 +9,7 @@ const MyItems = () => {
 
   useEffect(() => {
     const email = user.email;
-    const url = `https://quiet-oasis-81679.herokuapp.com/userItem?email=${email}`;
+    const url = `https://warehouse-management-webapp.onrender.com/userItem?email=${email}`;
     fetch(url, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -23,7 +23,7 @@ const MyItems = () => {
     const proceed = window.confirm("Are you sure to delete this?");
 
     if (proceed) {
-      const url = `https://quiet-oasis-81679.herokuapp.com/userItem/${id}`;
+      const url = `https://warehouse-management-webapp.onrender.com/userItem/${id}`;
       fetch(url, {
         method: "DELETE",
       })

@@ -10,7 +10,7 @@ const ManageAllInventory = ({ inventory }) => {
     const proceed = window.confirm("Are you sure to delete this?");
 
     if (proceed) {
-      const url = `https://quiet-oasis-81679.herokuapp.com/inventory/${_id}`;
+      const url = `https://warehouse-management-webapp.onrender.com/inventory/${_id}`;
       fetch(url, {
         method: "DELETE",
       })

@@ -12,7 +12,7 @@ const UpdateInvntory = () => {
   const handleQuantityDecrease = (id) => {
     const decrease = quantity - 1;
     const update = { decrease };
-    fetch(`https://quiet-oasis-81679.herokuapp.com/update/${id}`, {
+    fetch(`https://warehouse-management-webapp.onrender.com/update/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -29,7 +29,7 @@ const UpdateInvntory = () => {
   };
   const increaseQuantity = (id, decrease) => {
     const update = { decrease };
-    fetch(`https://quiet-oasis-81679.herokuapp.com/update/${id}`, {
+    fetch(`https://warehouse-management-webapp.onrender.com/update/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -53,7 +53,7 @@ const UpdateInvntory = () => {
   };
 
   useEffect(() => {
-    fetch(`https://quiet-oasis-81679.herokuapp.com/inventory/${_id}`)
+    fetch(`https://warehouse-management-webapp.onrender.com/inventory/${_id}`)
       .then((res) => res.json())
       .then((data) => setInventory(data));
   }, [deliverQuantity]);

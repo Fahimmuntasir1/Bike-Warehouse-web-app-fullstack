@@ -1,17 +1,17 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./AddNewItem.css";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
+import "./AddNewItem.css";
 
 const AddNewItem = () => {
   const [user] = useAuthState(auth);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
-    const url = `https://quiet-oasis-81679.herokuapp.com/useritem`;
+    const url = `https://warehouse-management-webapp.onrender.com/useritem`;
     fetch(url, {
       method: "POST",
       headers: { "content-type": "application/json" },
